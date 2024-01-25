@@ -1,0 +1,55 @@
+using System;
+
+class Program
+{
+  static void Main(string[] args)
+  {
+      Console.WriteLine("");
+      Console.WriteLine("");
+    Console.WriteLine("This is the final judgemnt for some of the world's most gifted...");
+    Console.WriteLine("the Judged may now Enter...");
+
+      string[] souls = new string[] { "The Rock", "Tom Cruise", "Jack Black", "Johnny Depp", "Jackie Chan", "Elvis Presley", "Michael Jackson", "Bruce Lee", "Brad Pitt", "Chuck Norris", "Stephen Hawking" };
+      string[] members = new string[10];
+      string[] judged = new string[10];
+
+      int soulIndex = 0;
+      int judgedIndex = 0;
+
+      foreach (var soul in souls)
+    
+      {
+          Console.WriteLine($"\nDo you want to let {soul} into the Afterlife? (Yes/No)");
+          string input = Console.ReadLine().ToLower();
+
+          if (input == "yes")
+          {
+              members[soulIndex] = soul;
+              soulIndex++;
+              Console.WriteLine($"\n{soul} has been let into the Afterlife");
+          }
+          else
+          {
+              judged[judgedIndex] = soul;
+              judgedIndex++;
+              Console.WriteLine($"\n{soul} has been sent to Hell!");
+          }
+      }
+
+      Console.WriteLine("\nThe following Souls have been selected for the Afterlife!");
+      foreach (var member in members)
+      {
+          Console.WriteLine(member);
+      }
+
+      Console.WriteLine("\nThe following Souls have been sent to Hell...");
+      foreach (var data in judged)
+      {
+          Console.WriteLine(data);
+      }
+
+      Console.WriteLine("\nPress any key to exit...");
+      Console.ReadKey();
+  }
+
+}
